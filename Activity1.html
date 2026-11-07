@@ -88,6 +88,33 @@
             cursor: not-allowed;
             pointer-events: none;
         }
+        .input-group {
+      margin-top: 20px;
+    }
+
+    .input-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+        .custom-input {
+      width: 100%;
+      padding: 10px;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      /* Starts with a semi-transparent opacity */
+      opacity: 0.7;
+      transition: all 0.3s ease;
+    }
+        .custom-input:focus {
+      outline: none;
+      border-color: #2196F3;
+      background-color: #e3f2fd;
+      /* Becomes fully opaque and solid when active/focused */
+      opacity: 1; 
+    }
   </style>
 </head>
 <body>
@@ -109,5 +136,10 @@
     <a href="#">Order Now</a>
     <a href="#" class="disabled">See More</a>
   </div>
+  <div class="input-group">
+      <label for="username">Username:</label>
+      <!-- Input element that uses the :focus pseudo-class -->
+      <input type="text" id="username" class="custom-input" placeholder="Type your username here...">
+    </div>
 </body>
 </html>
